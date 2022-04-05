@@ -44,9 +44,11 @@ img:hover {
     z-index: 10;
     float: left;
 
-    margin-top: 1rem;
+    padding-top: 1rem;
     width: 80%;
     height: 10%;
+
+    background-color: #2a4ff5 20%;
 }
 
 input {
@@ -82,7 +84,6 @@ figure {
     width: 80%;
 
     align-self: center;
-    text-align: center;
 }
 
 .todo-item {
@@ -101,15 +102,19 @@ figure {
     border-radius: 1rem;
     box-shadow: 0.2rem 0.2rem #000;
 
-    text-align: center;
+    text-align: left;
 }
 
 .todo-item p {
     margin: 0.5rem;
     margin-left: 1rem;
+
     word-break: break-all;
+
     padding: 0;
     width: 80%;
+
+    font-size: 1.2rem;
 }
 
 .img-del {
@@ -117,4 +122,32 @@ figure {
     width: 20%;
 
     margin: 0.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+    .input-field {
+        margin: 0 auto;
+        max-width: 100%;
+        justify-content: center;
+        float: none;
+        display: flex;
+        background-color: #2a4ff5 20%;
+    }
+
+    input {
+        width: 18rem;
+        margin-left: 2.5rem;
+    }
+
+    #addBtn {
+        margin-left: 1rem;
+    }
+
+    .todo-item {
+        width: 18rem;
+    }
+
+    .todo-item p {
+        font-size: 1.5rem;
+    }
 }
