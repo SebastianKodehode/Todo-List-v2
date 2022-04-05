@@ -6,6 +6,13 @@ const listField = document.querySelector('.list-field')
 // Button to run add todo item
 addBtn.addEventListener('click', addTodoItem)
 
+// Add todo with Enter key
+input.addEventListener('keydown', (e) => {
+    if (e.key === "Enter") {
+        addTodoItem()
+    }
+})
+
 // add todo item function
 function addTodoItem() {
 
@@ -17,14 +24,10 @@ function addTodoItem() {
 
         addTodo()
 
-        input.addEventListener('keydown', (e) => {
-            if (e.key === "Enter") {
-                addTodo()
-            }
-        })
     }
 }
 
+// Add todo item function
 function addTodo() {
     // Div to hold the content
     const todoItem = document.createElement('div')
